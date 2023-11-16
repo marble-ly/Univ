@@ -34,6 +34,8 @@ public class Book extends Item {
 
     public void getDescription(String description) { this.description = description;}
 
+    public void setDescription(String description) { this.description = description;}
+
     public String getCategory() { return category;}
 
     public void setCategory(String category) {this.category = category;}
