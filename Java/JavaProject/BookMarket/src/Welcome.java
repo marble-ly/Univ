@@ -8,7 +8,8 @@ public class Welcome {
 	static User mUser;
 
 	public static void main(String[] args) {
-		String[][] mBook = new String[NUM_BOOK][NUM_ITEM];
+		//String[][] mBook = new String[NUM_BOOK][NUM_ITEM];
+		Book[] mBookList = new Book[NUM_BOOK];
 		Scanner input = new Scanner(System.in);
 		
 		System.out.print("당신의 이름을 입력하세요 : ");
@@ -50,7 +51,8 @@ public class Welcome {
 					menuCartClear();
 					break;
 				case 4:
-					menuCartAddItem(mBook);
+					//menuCartAddItem(mBook);
+					menuCartAddItem(mBookList);
 					break;
 				case 5:
 					menuCartRemoveItemCount();
@@ -168,10 +170,8 @@ public class Welcome {
 		System.out.println("8. 종료");
 	}
 	
-	public static void BookList(String[][] book) {
-		book[0][0] = "ISBN1234";
-		book[0][1] = "쉽게 배우는 JSP 웹 프로그래밍";
-		book[0][2] = "27000";
+	public static void BookList(Book[] booklist) {
+		booklist[0] = new Book("ISBN1234", "쉽게 배우는 JSP 웹 프로그래밍", 27000);
 		book[0][3] = "송미영";
 		book[0][4] = "단계별로 쇼핑몰을 구현하며 배우는 JSP 웹 프로그래밍";
 		book[0][5] = "IT전문서";
