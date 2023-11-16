@@ -1,14 +1,16 @@
+package com.market.bookitem;
+
 public class Book extends Item {
     private String author;
     private String description;
     private String category;
     private String releaseDate;
 
-    public Book(String bookId, Stirng name, int unitPrice) {
+    public Book(String bookId, String name, int unitPrice) {
         super(bookId, name, unitPrice);
     }
 
-    public Book(String bookId, String name, int unitPrice, String author, Stirng description, String category, String releaseDate){
+    public Book(String bookId, String name, int unitPrice, String author, String description, String category, String releaseDate){
         super(bookId, name, unitPrice);
         this.author = author;
         this.description = description;
@@ -32,7 +34,7 @@ public class Book extends Item {
 
     public void setAuthor(String author) {this.author = author;}
 
-    public void getDescription(String description) { this.description = description;}
+    public String getDescription() { return description;}
 
     public void setDescription(String description) { this.description = description;}
 

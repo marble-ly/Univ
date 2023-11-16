@@ -1,4 +1,10 @@
+package com.market.main;
+
 import java.util.Scanner;
+import com.market.bookitem.Book;
+import com.market.cart.Cart;
+import com.market.member.Admin;
+import com.market.member.User;
 
 public class Welcome {
 	static final int NUM_BOOK = 3;
@@ -129,7 +135,7 @@ public class Welcome {
 		}
 	}
 	
-	public static void menuCartAddItem(String[][] book) {
+	public static void menuCartAddItem(Book[] booklist) {
 		//System.out.println("장바구니 항목 추가하기 : ");
 		
 		BookList(booklist);
@@ -168,7 +174,7 @@ public class Welcome {
 				str = input.nextLine();
 				
 				if(str.toUpperCase().equals("Y")) {
-					System.out.println(book[numId][0] + " 도서가 장바구니에 추가되었습니다.");
+					System.out.println(booklist[numId].getBookId() + " 도서가 장바구니에 추가되었습니다.");
 
 					if(!isCartInBook(booklist[numId].getBookId()))
 						//mCartItem[mCartCount++] = new CartItem(book[numId]);
@@ -196,7 +202,7 @@ public class Welcome {
 				System.out.print("장바구니에서 삭제할 도서의 ID를 입력하세요 :" );
 				Scanner input = new Scanner(System.in);
 				String str = input.nextLine();
-				boolean flag = flase;
+				boolean flag = false;
 				int numId = -1;
 
 				for (int i = 0; i < mCart.mCartCount; i++){
