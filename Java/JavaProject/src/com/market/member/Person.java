@@ -1,3 +1,5 @@
+package com.market.member;
+
 public class Person {
     //279page
     private String name;
