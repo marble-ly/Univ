@@ -462,7 +462,7 @@ public class Welcome {
 		}
 		catch(Exception e) {
 				System.out.println(e);
-			}
+		}
 		return 0;
 	}
 
