@@ -424,9 +424,9 @@ public class Welcome {
 					FileWriter fw = new FileWriter("book.txt", true);
 					for(int i=0; i<7; i++){
 						fw.write(writeBook[i]+"\n");
-						fw.close();
-						System.out.println("새 도서 정보가 저장되었습니다.");
 					}
+					fw.close();
+					System.out.println("새 도서 정보가 저장되었습니다.");
 				}
 				catch(Exception e){
 					System.out.println(e);
