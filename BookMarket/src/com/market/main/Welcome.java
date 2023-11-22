@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Date;
 import com.market.bookitem.Book;
 import com.market.cart.Cart;
 import com.market.member.Admin;
@@ -226,7 +227,7 @@ public class Welcome {
 			boolean flag = false;
 			int numId = -1;
 			
-			for (int i = 0; i < Booklist.size(); i++) {
+			for (int i = 0; i < booklist.size(); i++) {
 				if (str.equals(booklist.get(i).getBookId())) {
 					numId = i;
 					flag = true;

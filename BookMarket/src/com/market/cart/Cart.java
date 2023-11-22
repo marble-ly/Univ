@@ -77,7 +77,7 @@ public class Cart implements CartInterface {
             }
         }*/
 
-        mCartitem.remove(numId);
+        mCartItem.remove(numId);
         mCartCount = mCartItem.size();
     }
     
